@@ -1,8 +1,17 @@
 import os
 import random
+import json
+
+with open("studentSchedules.json", "r") as f:
+    schedules = json.load(f)
+
+recruitNames = []
+for key in schedules:
+    recruitNames.append(key)
 
 from discord import errors
 from discord.ext import commands
+from discord import utils
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -29,19 +38,40 @@ async def github(ctx):
 
     await ctx.send(githubLink)
 
-# @bot.command(name='99', help='Responds with a random quote from Brooklyn 99')
-# async def nine_nine(ctx):
-#     brooklyn_99_quotes = [
-#         'I\'m the human form of the 💯 emoji.',
-#         'Bingpot!',
-#         (
-#             'Cool. Cool cool cool cool cool cool cool, '
-#             'no doubt no doubt no doubt no doubt.'
-#         ),
-#     ]
+@bot.command(name='schedule', help="Provides an overall schedule if no recruit name is provided, otherwise will provide a certain recruit's schedule")
+async def getSchedules(ctx, name=None):
+    print(ctx.author)
+    responseText = [
+        '8:00 - 10:00: Welcome\n',
+        '10:00 - 11:00: Data Blitz\n',
+    ]
+    if name in recruitNames:
+        responseText.append(schedules[name])
+    else:
+        responseText.append('GENERIC RESPONSE')
+    response = ''
+    await ctx.send(response.join(responseText))
 
-#     response = random.choice(brooklyn_99_quotes)
-#     await ctx.send(response)
+@bot.command(name='createTextChannel', help='Will create a text channel if a user with admin privileges wants to')
+@commands.has_role('admin')
+async def createTextChannel(ctx, channelName):
+    guild = ctx.guild
+    existing_channel = utils.get(guild.channels, name=channelName)
+    if not existing_channel:
+        await guild.create_text_channel(channelName)
+
+@bot.command(name='createVoiceChannel', help='Will create a voice channel if a user with admin privileges wants to')
+@commands.has_role('admin')
+async def createVoiceChannel(ctx, channelName):
+    guild = ctx.guild
+    existing_channel = utils.get(guild.channels, name=channelName)
+    if not existing_channel:
+        await guild.create_voice_channel(channelName)
+
+@bot.event
+async def on_command_error(ctx, error):
+    if isinstance(error, commands.errors.CheckFailure):
+        await ctx.send('You do not have the correct role for this command.')
 
 print('Attempting to log in the bot...')
 try:
