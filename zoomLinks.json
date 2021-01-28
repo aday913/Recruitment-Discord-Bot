@@ -1,0 +1,48 @@
+{
+    "test" : "1234",
+    "test2" : "5678",
+    "interviews" : {
+        "generic" : [
+            "Links for Admissions Interviews:\n",
+            "Dr. Reidel-Kruse: https://us02web.zoom.us/j/86915082403?pwd=dTZkSVVlL3NMTTYyY0NQd0ZNdkNpZz09\n",
+            "Dr. Li: https://us02web.zoom.us/j/87282834420?pwd=blY4ZHBQTTQzOFlRK2QvTnduZEZIQT09\n",
+            "Dr. Vanderpool: https://us02web.zoom.us/j/83634432734?pwd=ZzRhT0w5cHVxK2pOcE9IY2VxUktMZz09\n",
+            "Dr. Toosizadeh: https://us02web.zoom.us/j/81106433240?pwd=UjE2cHZMVFZTUElRMVgvWVZyVFVmUT09\n",
+            "Dr. Hutchinson: https://us02web.zoom.us/j/85836604837?pwd=djU3ekNPaVhGZVloeTRMUXNDWTh2QT09\n",
+            "Dr. Laksari: https://us02web.zoom.us/j/88210264635?pwd=K0pZMUl3N3hkY1dZd3N0YjNqNitDdz09\n",
+            "Dr. Witte: https://us02web.zoom.us/j/86467074697?pwd=VEdEakd4TmNReXU0NitCRE9vcjRQZz09\n",
+            "Dr. Yoon: https://us02web.zoom.us/j/89438495863?pwd=Mng3ZC90ZHFZZUdidU02aU9SclVwZz09\n",
+            "Dr Gutruf: https://us02web.zoom.us/j/83345313685?pwd=clN2YzBsdU82eVZTZzBIU0ZBZ2dWZz09\n",
+            "Dr Chen: https://us02web.zoom.us/j/85146439608?pwd=QWZ5TUJ6WXNocjB1VEszbi8zdnhpQT09"
+        ],
+        "reidel-kruse" : "Dr. Reidel-Kruse Interview: https://us02web.zoom.us/j/86915082403?pwd=dTZkSVVlL3NMTTYyY0NQd0ZNdkNpZz09",
+        "li" : "Dr. Li Interview: https://us02web.zoom.us/j/87282834420?pwd=blY4ZHBQTTQzOFlRK2QvTnduZEZIQT09",
+        "vanderpool" : "Dr. Vanderpool Interview: https://us02web.zoom.us/j/83634432734?pwd=ZzRhT0w5cHVxK2pOcE9IY2VxUktMZz09",
+        "toosizadeh" : "Dr. Toosizadeh Interview: https://us02web.zoom.us/j/81106433240?pwd=UjE2cHZMVFZTUElRMVgvWVZyVFVmUT09",
+        "hutchinson" : "Dr. Hutchinson Interview: https://us02web.zoom.us/j/85836604837?pwd=djU3ekNPaVhGZVloeTRMUXNDWTh2QT09",
+        "laksari" : "Dr. Laksari Interview: https://us02web.zoom.us/j/88210264635?pwd=K0pZMUl3N3hkY1dZd3N0YjNqNitDdz09",
+        "witte" : "Dr. Witte Interview: https://us02web.zoom.us/j/86467074697?pwd=VEdEakd4TmNReXU0NitCRE9vcjRQZz09",
+        "yoon" : "Dr. Yoon Interview: https://us02web.zoom.us/j/89438495863?pwd=Mng3ZC90ZHFZZUdidU02aU9SclVwZz09",
+        "gutruf" : "Dr Gutruf Interview: https://us02web.zoom.us/j/83345313685?pwd=clN2YzBsdU82eVZTZzBIU0ZBZ2dWZz09",
+        "chen" : "Dr Chen Interview: https://us02web.zoom.us/j/85146439608?pwd=QWZ5TUJ6WXNocjB1VEszbi8zdnhpQT09"
+    },
+    "tours" : { 
+        "generic" : [
+            "Links for Lab Tours:\n",
+            "Dr. Gutruf: https://us02web.zoom.us/j/89611328378?pwd=cU9oT2E0NW81b0JFOE12dUZLZ0ZqUT09\n",
+            "Dr. Li: https://us02web.zoom.us/j/82433884813?pwd=THFZSUUySWw1WnVPUFZLMUNmaTNFZz09\n",
+            "MRI Facility: https://us02web.zoom.us/j/84706925286?pwd=SXlLcVZEbnl4TmgvOWFVUXN2NTZpdz09\n",
+            "Dr. Yoon: https://us02web.zoom.us/j/81327204703?pwd=NHdjQmlIY1IwZ1JRZGdWcnE5ajUrZz09\n",
+            "Dr. Vedantham: https://us02web.zoom.us/j/89440370189?pwd=M2YyN25sNU13SWpoaUlERGtMclZtUT09\n",
+            "Dr. Toosizadeh: https://us02web.zoom.us/j/82069933819?pwd=UXhjdENaRjRiS1BtS3ZRNU9wdk9EZz09\n",
+            "Dr. Reidel-Kruse: https://us02web.zoom.us/j/86306533927?pwd=b1VkT3lMRDE2UzFiNFlkQmVueTBqQT09"
+        ],
+        "gutruf" : "Gutruf Lab Tour: https://us02web.zoom.us/j/89611328378?pwd=cU9oT2E0NW81b0JFOE12dUZLZ0ZqUT09",
+        "li" : "Li Lab Tour: https://us02web.zoom.us/j/82433884813?pwd=THFZSUUySWw1WnVPUFZLMUNmaTNFZz09",
+        "mri" : "MRI Facility Tour: https://us02web.zoom.us/j/84706925286?pwd=SXlLcVZEbnl4TmgvOWFVUXN2NTZpdz09",
+        "yoon" : "Yoon Lab Tour: https://us02web.zoom.us/j/81327204703?pwd=NHdjQmlIY1IwZ1JRZGdWcnE5ajUrZz09",
+        "vedantham" : "Vedantham Lab Tour: https://us02web.zoom.us/j/89440370189?pwd=M2YyN25sNU13SWpoaUlERGtMclZtUT09",
+        "toosizadeh" : "Toosizadeh Lab Tour: https://us02web.zoom.us/j/82069933819?pwd=UXhjdENaRjRiS1BtS3ZRNU9wdk9EZz09",
+        "reidel-kruse" : "Reidel-Kruse Lab Tour: https://us02web.zoom.us/j/86306533927?pwd=b1VkT3lMRDE2UzFiNFlkQmVueTBqQT09"
+    }
+}
