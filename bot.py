@@ -4,10 +4,18 @@ import json
 
 with open("studentSchedules.json", "r") as f:
     schedules = json.load(f)
-
 recruitNames = []
 for key in schedules:
     recruitNames.append(key)
+
+with open("zoomLinks.json", "r") as f:
+    links = json.load(f)
+interviewNames = []
+for key in links['interviews']:
+    interviewNames.append(key)
+tourNames = []
+for key in links['tours']:
+    tourNames.append(key)
 
 from discord import errors
 from discord.ext import commands
@@ -18,6 +26,21 @@ load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
 bot = commands.Bot(command_prefix='!')
+
+@bot.command(name='commands', help='Returns the list of possible bot commands')
+async def getCommands(ctx):
+    commands = (
+            '!socials: returns the social media links for the department!\n'
+            '!github: returns the github link for the bot! \n'
+            '!schedule: gets the generic recruit schedule \n'
+            '!schedule [insert name]: gets the schedule for particular recruits \n'
+            '!interviewLinks [insert name]: grab the zoom link for admissions interviews\n'
+            '!tourLinks [insert name]: grab the zoom link for lab tours\n'
+            'ADMIN ONLY:\n'
+            '!createTextChannel [insert name]: create a discord text channel with a given name\n'
+            '!createVoiceChannel [insert name]: create a discord voice channel with a given name\n'
+        )
+    await ctx.send(commands)
 
 @bot.command(name='socials', help='Responds with links to the various BME social media sites')
 async def socialLinks(ctx):
@@ -40,9 +63,6 @@ async def github(ctx):
 
 @bot.command(name='schedule', help="Provides an overall schedule if no recruit name is provided, otherwise will provide a certain recruit's schedule")
 async def getSchedules(ctx, name=None):
-    '''
-    Returns the schedule for a certain student if the 
-    '''
     # print(ctx.author)
     name = str(name)
     name = name.lower()
@@ -50,6 +70,30 @@ async def getSchedules(ctx, name=None):
         responseText = schedules[name]['Schedule']
     else:
         responseText = schedules['generic']
+    response = ''
+    await ctx.send(response.join(responseText))
+
+@bot.command(name='interviewLinks', help="Provides the zoom links for the admissions interviews")
+async def getInterviewLinks(ctx, name=None):
+    # print(ctx.author)
+    name = str(name)
+    name = name.lower()
+    if name in interviewNames:
+        responseText = links['interviews'][name]
+    else:
+        responseText = links['interviews']['generic']
+    response = ''
+    await ctx.send(response.join(responseText))
+
+@bot.command(name='tourLinks', help="Provides the zoom links for the lab tours")
+async def getTourLinks(ctx, name=None):
+    # print(ctx.author)
+    name = str(name)
+    name = name.lower()
+    if name in interviewNames:
+        responseText = links['tours'][name]
+    else:
+        responseText = links['tours']['generic']
     response = ''
     await ctx.send(response.join(responseText))
 
