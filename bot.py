@@ -40,15 +40,16 @@ async def github(ctx):
 
 @bot.command(name='schedule', help="Provides an overall schedule if no recruit name is provided, otherwise will provide a certain recruit's schedule")
 async def getSchedules(ctx, name=None):
-    print(ctx.author)
-    responseText = [
-        '8:00 - 10:00: Welcome\n',
-        '10:00 - 11:00: Data Blitz\n',
-    ]
+    '''
+    Returns the schedule for a certain student if the 
+    '''
+    # print(ctx.author)
+    name = str(name)
+    name = name.lower()
     if name in recruitNames:
-        responseText.append(schedules[name])
+        responseText = schedules[name]['Schedule']
     else:
-        responseText.append('GENERIC RESPONSE')
+        responseText = schedules['generic']
     response = ''
     await ctx.send(response.join(responseText))
 
